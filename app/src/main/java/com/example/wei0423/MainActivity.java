@@ -32,37 +32,37 @@ public class MainActivity extends AppCompatActivity {
         e = findViewById(R.id.ed_weight);
     }
 
-    public void show(View view) {
-        TextView b = findViewById(R.id.tv_showname);
-        b.setText("歡迎" + a.getText().toString());
-        TextView d = findViewById(R.id.tv_showheight);
-        TextView f = findViewById(R.id.tv_showweight);
-        f.setText("體重:" + e.getText().toString()+"kg");
-        ImageView view1 = (ImageView) findViewById(R.id.iv_pic);
-        double c_value = Double.parseDouble(c.getText().toString());
-        double e_value = Double.parseDouble(e.getText().toString());
-        double bmi = e_value / (c_value/100.0 * c_value/100.0);
-        DecimalFormat df = new DecimalFormat("#.##");
-
-
-        TextView g = findViewById(R.id.tv_showbmi);
-        String rem;
-        if (bmi<18.5){
-            rem="體重過輕";
-//            Toast.makeText(this, "體重過輕", Toast.LENGTH_LONG).show();
-            view1.setImageResource(R.drawable.bmi1);
-        }else if(bmi>24){
-            rem="體重過重";
-//            Toast.makeText(this, "體重過重", Toast.LENGTH_LONG).show();
-            view1.setImageResource(R.drawable.bmi3);
-        }else{
-            rem="正常體重";
-//            Toast.makeText(this, "正常體重", Toast.LENGTH_LONG).show();
-            view1.setImageResource(R.drawable.bmi2);
-        }
-        Toast.makeText(this,rem, Toast.LENGTH_LONG).show();
-        g.setText("BMI:" + df.format(bmi) + rem);
-    }
+//    public void show(View view) {
+//        TextView b = findViewById(R.id.tv_showname);
+//        b.setText("歡迎" + a.getText().toString());
+//        TextView d = findViewById(R.id.tv_showheight);
+//        TextView f = findViewById(R.id.tv_showweight);
+//        f.setText("體重:" + e.getText().toString()+"kg");
+//        ImageView view1 = (ImageView) findViewById(R.id.iv_pic);
+//        double c_value = Double.parseDouble(c.getText().toString());
+//        double e_value = Double.parseDouble(e.getText().toString());
+//        double bmi = e_value / (c_value/100.0 * c_value/100.0);
+//        DecimalFormat df = new DecimalFormat("#.##");
+//
+//
+//        TextView g = findViewById(R.id.tv_showbmi);
+//        String rem;
+//        if (bmi<18.5){
+//            rem="體重過輕";
+////            Toast.makeText(this, "體重過輕", Toast.LENGTH_LONG).show();
+//            view1.setImageResource(R.drawable.bmi1);
+//        }else if(bmi>24){
+//            rem="體重過重";
+////            Toast.makeText(this, "體重過重", Toast.LENGTH_LONG).show();
+//            view1.setImageResource(R.drawable.bmi3);
+//        }else{
+//            rem="正常體重";
+////            Toast.makeText(this, "正常體重", Toast.LENGTH_LONG).show();
+//            view1.setImageResource(R.drawable.bmi2);
+//        }
+//        Toast.makeText(this,rem, Toast.LENGTH_LONG).show();
+//        g.setText("BMI:" + df.format(bmi) + rem);
+//    }
 
     public void nextPage(View view) {
         Bundle bundle = new Bundle();
